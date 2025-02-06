@@ -6,15 +6,10 @@ import Link from "next/link";
 import { useGlobalState } from "../../services/globalstate";
 
 export default function UserPostsPage() {
-  const { id } = useParams(); // Get user ID from URL
+  const { id } = useParams(); 
   const { users, posts, loading, error, fetchingUserPosts,fetchingUsers } = useGlobalState();
 
-  // Fetch users list on mount (only if not already fetched)
-  // useEffect(() => {
-  //   if (users.length === 0) fetchingUsers();
-  // }, []);
-
-  // Fetch user posts when `id` changes
+  
   useEffect(() => {
     fetchingUserPosts(id);
   }, [id]);
@@ -25,7 +20,7 @@ export default function UserPostsPage() {
     }
   }, []);
 
-  // Find the selected user from global state
+  
   const selectedUser = users.find((user) => user.id === Number(id));
 
   return (
