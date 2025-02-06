@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file://D%3A/React-Native-Project/Next/next-project/src/app/services/api.js"],"sourcesContent":["import axios from \"axios\";\r\n\r\nconst API_BASE_URL = \"https://jsonplaceholder.typicode.com\"; // Example API\r\n\r\nexport const fetchUsers = async () => {\r\n  try {\r\n    const response = await axios.get(`${API_BASE_URL}/users`);\r\n    return response.data;\r\n  } catch (error) {\r\n    throw new Error(\"Failed to fetch users\",error);\r\n  }\r\n};\r\n\r\nexport const fetchUserPosts = async (userId) => {\r\n  try {\r\n    const response = await axios.get(`${API_BASE_URL}/posts?userId=${userId}`);\r\n    return response.data;\r\n  } catch (error) {\r\n    throw new Error(\"Failed to fetch posts\",error);\r\n  }\r\n};\r\n"],"names":[],"mappings":";;;;AAAA;;AAEA,MAAM,eAAe,wCAAwC,cAAc;AAEpE,MAAM,aAAa;IACxB,IAAI;QACF,MAAM,WAAW,MAAM,wIAAA,CAAA,UAAK,CAAC,GAAG,CAAC,GAAG,aAAa,MAAM,CAAC;QACxD,OAAO,SAAS,IAAI;IACtB,EAAE,OAAO,OAAO;QACd,MAAM,IAAI,MAAM,yBAAwB;IAC1C;AACF;AAEO,MAAM,iBAAiB,OAAO;IACnC,IAAI;QACF,MAAM,WAAW,MAAM,wIAAA,CAAA,UAAK,CAAC,GAAG,CAAC,GAAG,aAAa,cAAc,EAAE,QAAQ;QACzE,OAAO,SAAS,IAAI;IACtB,EAAE,OAAO,OAAO;QACd,MAAM,IAAI,MAAM,yBAAwB;IAC1C;AACF"}},
+    {"offset": {"line": 33, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
+}
